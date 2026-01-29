@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
       if (firebaseUser) {
         // Sync with MongoDB to get Role
         try {
-          const res = await axios.post('https://bhoot-cam-server.vercel.app/api/auth/sync', {
+          const res = await axios.post('https://bhoot-cam-next-j99n.vercel.app/api/auth/sync', {
             uid: firebaseUser.uid,
             email: firebaseUser.email,
             photoURL: firebaseUser.photoURL,
