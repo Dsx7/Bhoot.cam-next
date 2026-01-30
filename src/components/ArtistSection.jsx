@@ -15,7 +15,7 @@ export default function ArtistSection() {
         <div className="flex flex-col md:flex-row items-center gap-8 p-8 md:p-12">
           {/* Artist Image */}
           <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-[#00DB80]/20 shrink-0 shadow-2xl">
-            <img src="https://i.ibb.co.com/FLZsnnpL/542731020-1280315083892591-3291483229751156485-n.jpg" alt="RJ Russell" className="w-full h-full object-cover" />
+            <img src="/rj_russell.jpg" alt="RJ Russell" className="w-full h-full object-cover" />
           </div>
 
           {/* Bio Content */}
