@@ -8,6 +8,7 @@ import { useTheme } from '@/providers/ThemeProvider';
 import useAxiosPublic from '@/hooks/useAxiosPublic';
 import { Menu, X, Sun, Moon, LayoutDashboard, LogOut, User, ChevronDown, ShieldCheck, Heart, LogIn } from 'lucide-react';
 import Swal from 'sweetalert2';
+import Script from 'next/script'
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
@@ -35,6 +36,7 @@ const Navbar = () => {
   const isLinkActive = (path) => pathname === path;
 
   return (
+		
     <header className="sticky top-0 z-50 w-full bg-[#050505]/95 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         

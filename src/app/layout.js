@@ -4,6 +4,7 @@ import { AuthProvider } from "@/context/AuthProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -80,6 +81,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+	{/*<head>
+        {/* 2. Ads Code Here. 
+            'beforeInteractive' ensures it loads as early as possible. */}
+      {/*  <Script 
+          src="https://pl26421586.effectivegatecpm.com/f9/31/2b/f9312ba0cea69089883ba75ed9df3a42.js" 
+          strategy="beforeInteractive" 
+        />
+      </head> */}
       <body className={inter.className}>
         <AuthProvider>
           <ThemeProvider>

@@ -4,6 +4,9 @@ import React, { useEffect, useState } from 'react';
 import useAxiosPublic from '@/hooks/useAxiosPublic';
 import HeroSlider from '@/components/HeroSlider'; 
 import EpisodeCard from '@/components/EpisodeCard';
+import CategoryGrid from '@/components/CategoryGrid'; 
+import StatsSection from '@/components/StatsSection'; 
+import ArtistSection from '@/components/ArtistSection'; 
 import { Send, ChevronRight, Zap, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
@@ -42,7 +45,8 @@ export default function Home() {
       {/* MAIN CONTENT CONTAINER */}
       <div className="container mx-auto px-4 md:px-8 mt-12 md:mt-24 space-y-24">
         
-        
+        {/* 2. CATEGORY GRID SECTION (Added) */}
+        <CategoryGrid />
 
         {/* 3. LATEST EPISODES GRID */}
         <section>
@@ -70,6 +74,19 @@ export default function Home() {
 		<Link href="/explore" className="group flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[#00DB80] transition-colors border border-white/5 px-6 py-3 rounded-xl bg-white/5 hover:bg-[#0f0f0f]">
                     View All Episodes <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform"/>
                 </Link>
+				{/* Artist section */}
+        <div className="mt-20">
+            <ArtistSection />
+        </div>
+
+
+
+					{/* 4. STATS SECTION (Added) */}
+        <div className="mt-20">
+            <StatsSection />
+        </div>
+
+
 
         {/* 4. TELEGRAM COMMUNITY */}
         <section className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] bg-[#0f0f0f] border border-white/5 p-8 md:p-20 text-center md:text-left">
