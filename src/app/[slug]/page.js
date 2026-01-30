@@ -1,7 +1,8 @@
 import React from 'react';
 import EpisodeClient from './EpisodeClient';
+import { notFound } from 'next/navigation'; // 1. Import notFound
 
-// --- SERVER SIDE SEO GENERATION ---
+// --- SERVER SIDE SEO GENERATION (Unchanged) ---
 export async function generateMetadata(props) {
     const params = await props.params;
     const { slug } = params;
@@ -38,6 +39,39 @@ export async function generateMetadata(props) {
     }
 }
 
-export default function Page() {
-    return <EpisodeClient / > ;
+// --- MAIN PAGE COMPONENT (Updated) ---
+export default async function Page(props) {
+    const params = await props.params;
+    const { slug } = params;
+
+    // 2. Server-Side Check: Does this episode actually exist?
+    try {
+        const res = await fetch(`https://bhoot-cam-next-j99n.vercel.app/episodes/${slug}`, {
+            cache: 'no-store'
+        });
+
+        // If the API says 404 or fails, we immediately trigger the Not Found page
+        if (!res.ok) {
+            notFound(); 
+        }
+
+        const text = await res.text();
+        // If body is empty, trigger 404
+        if (!text) {
+            notFound();
+        }
+
+        const episode = JSON.parse(text);
+        // If JSON parse results in null/undefined, trigger 404
+        if (!episode) {
+            notFound();
+        }
+
+    } catch (error) {
+        // If fetch completely fails (API down), trigger 404
+        notFound();
+    }
+
+    // 3. If we survive the check above, render the Client Component
+    return <EpisodeClient />;
 }

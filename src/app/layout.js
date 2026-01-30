@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 // import LiveVisualizer from '@/components/LiveVisualizer';
+import SearchModal from '@/components/SearchModal';
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -100,6 +101,7 @@ export default function RootLayout({ children }) {
                 </main>
              </div>
 			{/* <LiveVisualizer /> */}
+			<SearchModal />
              <Footer />
           </ThemeProvider>
         </AuthProvider>
