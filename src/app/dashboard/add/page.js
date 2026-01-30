@@ -135,6 +135,7 @@ function EpisodeForm() {
                         <option value="Thriller">Thriller</option>
                         <option value="Paranormal">Paranormal</option>
                         <option value="Sunday Suspense">Sunday Suspense</option>
+                        <option value="Bhoot.Com all Episode With Rj Russell">Bhoot.Com all Episode With Rj Russell</option>
                     </select>
                 </div>
                 <div>
