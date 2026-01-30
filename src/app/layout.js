@@ -4,6 +4,7 @@ import { AuthProvider } from "@/context/AuthProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+// import LiveVisualizer from '@/components/LiveVisualizer';
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -98,6 +99,7 @@ export default function RootLayout({ children }) {
                     {children}
                 </main>
              </div>
+			{/* <LiveVisualizer /> */}
              <Footer />
           </ThemeProvider>
         </AuthProvider>

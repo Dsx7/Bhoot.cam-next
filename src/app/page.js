@@ -7,6 +7,9 @@ import EpisodeCard from '@/components/EpisodeCard';
 import CategoryGrid from '@/components/CategoryGrid'; 
 import StatsSection from '@/components/StatsSection'; 
 import ArtistSection from '@/components/ArtistSection'; 
+import TelegramSection from '@/components/TelegramSection'; 
+import Testimonials from '@/components/Testimonials'; 
+import AppPromo from '@/components/AppPromo'; 
 import { Send, ChevronRight, Zap, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
@@ -75,43 +78,28 @@ export default function Home() {
                     View All Episodes <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform"/>
                 </Link>
 				{/* Artist section */}
-        <div className="mt-20">
+        <div className="mt-10">
             <ArtistSection />
         </div>
 
-
-
-					{/* 4. STATS SECTION (Added) */}
-        <div className="mt-20">
-            <StatsSection />
+			<div className="">
+            <Testimonials />
         </div>
 
-
-
-        {/* 4. TELEGRAM COMMUNITY */}
-        <section className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] bg-[#0f0f0f] border border-white/5 p-8 md:p-20 text-center md:text-left">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#00DB80] rounded-full blur-[180px] opacity-10 pointer-events-none"></div>
-            
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
-                <div className="max-w-2xl">
-                    <h2 className="text-3xl md:text-6xl font-black text-white mb-6 tracking-tighter">
-                        Join the <span className="text-[#00DB80]">Cult.</span>
-                    </h2>
-                    <p className="text-gray-400 text-lg md:text-xl mb-10 font-medium">
-                        Get instant notifications, exclusive uncut episodes, and chat with 25,000+ horror fans on our official Telegram channel.
-                    </p>
-                    <a href="https://t.me/bhootbdcom" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center px-8 py-4 font-black text-black bg-[#00DB80] rounded-2xl hover:bg-[#00b368] shadow-xl shadow-[#00DB80]/20 transition-all hover:-translate-y-1 w-full md:w-auto">
-                        <Send className="mr-2" size={20} />
-                        Join Telegram
-                    </a>
-                </div>
-                {/* Visual Icon */}
-                <div className="hidden md:flex w-40 h-40 bg-[#151515] rounded-[2.5rem] items-center justify-center border border-white/10 rotate-6 shadow-2xl">
-                    <Send size={64} className="text-[#00DB80]" />
-                </div>
-            </div>
-        </section>
-
+					{/* 4. STATS SECTION (Added) */}
+        <div className="mt-10">
+            <StatsSection />
+        </div>
+		
+		<div className="mt-10">
+            <AppPromo />
+        </div>
+		
+			<div className="mt-10">
+            <TelegramSection />
+        </div>
+			
+			
       </div>
     </div>
   );

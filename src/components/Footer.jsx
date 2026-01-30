@@ -2,7 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Facebook, Twitter, Instagram, Youtube, Mail } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Youtube, Mail, Send } from 'lucide-react';
+
+
 
 const Footer = () => {
   return (
@@ -31,9 +33,7 @@ const Footer = () => {
             <h3 className="text-white font-bold uppercase tracking-widest mb-6 text-sm">Discover</h3>
             <ul className="space-y-3 text-sm text-gray-400">
               <li><Link href="/explore" className="hover:text-[#00DB80] transition-colors">Latest Episodes</Link></li>
-              <li><Link href="/explore?category=True%20Horror" className="hover:text-[#00DB80] transition-colors">True Stories</Link></li>
-              <li><Link href="/explore?category=Paranormal" className="hover:text-[#00DB80] transition-colors">Paranormal</Link></li>
-              <li><Link href="/explore?category=Sunday%20Suspense" className="hover:text-[#00DB80] transition-colors">Sunday Suspense</Link></li>
+              <li><Link href="/explore?category=Bhoot.Com%20all%20Episode%20With%20Rj%20Russell" className="hover:text-[#00DB80] transition-colors">Bhoot.Com all Episode With Rj Russell</Link></li>
             </ul>
           </div>
 
@@ -55,15 +55,15 @@ const Footer = () => {
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-[#00DB80] hover:text-black transition-all">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-[#00DB80] hover:text-black transition-all">
-                <Twitter size={18} />
+              <a href="https://t.me/bhootbdcom" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-[#00DB80] hover:text-black transition-all">
+                <Send size={18} />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-[#00DB80] hover:text-black transition-all">
                 <Youtube size={18} />
               </a>
             </div>
-            <a href="mailto:support@bhoot.cam" className="flex items-center gap-2 mt-6 text-sm text-gray-400 hover:text-[#00DB80]">
-                <Mail size={16} /> support@bhoot.cam
+            <a href="mailto:info@bhoot.cam" className="flex items-center gap-2 mt-6 text-sm text-gray-400 hover:text-[#00DB80]">
+                <Mail size={16} /> info@bhoot.cam
             </a>
           </div>
 
