@@ -28,7 +28,7 @@
   <br />
 
   <a href="https://bhoot-cam-next.vercel.app/">
-    <img src="https://i.ibb.co.com/jkQ63skF/bhoot-next-js.webp" alt="Bhoot.cam Dashboard Preview" width="100%" style="border-radius: 20px; border: 2px solid #333; box-shadow: 0 0 50px rgba(0, 219, 128, 0.2);" />
+    <img src="https://i.ibb.co.com/3YfFPyBD/compressed-image.jpg" alt="Bhoot.cam Dashboard Preview" width="100%" style="border-radius: 20px; border: 2px solid #333; box-shadow: 0 0 50px rgba(0, 219, 128, 0.2);" />
   </a>
 
   <br />
